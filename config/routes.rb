@@ -1,8 +1,14 @@
-Rails.application.routes.draw do
-  resources :blogs
-  resources :portfolios
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+
+  resources :portfolios
+  resources :blogs do
+    member do
+      put :toggle_status
+    end
+  end
 end
