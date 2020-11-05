@@ -56,9 +56,5 @@ class PortfoliosController < ApplicationController
     params
       .require(:portfolio)
       .permit(:title, :subtitle, :body)
-      .merge(
-        main_image: 'https://picsum.photos/600/400',
-        thumb_image: 'https://picsum.photos/350/200'
-      )
   end
 end
