@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+gem 'devise', '~> 4.2'
 gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
