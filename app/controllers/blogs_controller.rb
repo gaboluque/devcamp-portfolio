@@ -7,10 +7,13 @@ class BlogsController < ApplicationController
   # GET /blogs
   def index
     @blogs = Blog.all
+    @page_title = 'Blog'
   end
 
   # GET /blogs/1
-  def show; end
+  def show
+    @page_title = @blog.title
+  end
 
   # GET /blogs/new
   def new
