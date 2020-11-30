@@ -11,17 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "form-control", rows: 15 %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row justify-content-center mb-3 mt-3">
+    <div class="col-5">
+      <%= link_to 'Back', blogs_path, class: "btn btn-link" %>
+    </div>
+    <div class="actions col-7 text-center">
+      <%= f.submit "Submit", class: "btn btn-primary w-100" %>
+    </div>
   </div>
 <% end %>
