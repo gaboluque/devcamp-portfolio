@@ -166,3 +166,10 @@ body {
   margin-bottom: 10px
 }
 
+.home-nav span {
+  margin-left: 10px;
+
+  &:last-of-type {
+    margin-right: 10px;
+  }
+}
