@@ -4,11 +4,18 @@
 class PortfoliosController < ApplicationController
   layout 'portfolio'
   access all: %i[show index],
-         user: { except: %i[destroy new create update edit] },
+         user: { except: %i[destroy new create update edit sort] },
          site_admin: :all
 
   def index
     @portfolio_items = Portfolio.by_position
+  end
+
+  def sort
+    params[:order].each do |_, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    render json: {}, status: :ok
   end
 
   def new

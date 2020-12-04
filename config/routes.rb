@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
-  resources :portfolios
+  resources :portfolios do
+    put :sort, on: :collection
+  end
+
   resources :blogs do
     member do
       put :toggle_status
