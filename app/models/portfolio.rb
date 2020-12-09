@@ -12,6 +12,9 @@ class Portfolio < ApplicationRecord
   validates_presence_of :title, :body, :main_image, :thumb_image
   after_initialize :set_defaults
 
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   def self.react
     where(subtitle: 'ReactJS')
   end
