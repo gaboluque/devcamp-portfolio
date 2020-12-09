@@ -34,11 +34,10 @@
   <h3>Technologies used</h3>
   <ul>
     <%= f.fields_for :technologies do |technology_form| %>
-      <li class="form-group"> 
-        <%= technology_form.label :name %>
-        <%= technology_form.text_field :name, class: "form-control" %>
-      </li>
+      <%= render 'technology_fields', f: technology_form %>
     <% end %>
+    <%= link_to_add_association 'Add Technology', f, :technologies%>
+
   </ul>
 
   <div class="actions row justify-content-end">
