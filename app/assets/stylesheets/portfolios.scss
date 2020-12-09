@@ -112,3 +112,11 @@ footer p {
 .sortable > div {
   cursor: grab;
 }
+
+.portfolio-item {
+  .portfolio-thumb {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
