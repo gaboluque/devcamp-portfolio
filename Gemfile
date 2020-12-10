@@ -42,6 +42,7 @@ gem 'devise', '~> 4.2'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 gem 'friendly_id', '~> 5.1.0'
+gem "gritter", "1.2.0"
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'mini_magick', '~> 4.6'
 gem 'petergate', '~> 1.7'
