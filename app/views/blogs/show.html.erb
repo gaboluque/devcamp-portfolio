@@ -9,7 +9,7 @@
 
 <%= render "comments/comment_form" %>
 
-<div class="blog-post-comments mt-3">
+<div id="comments" data-blog-id="<%= @blog.id %>" class="blog-post-comments mt-3">
   <% if @blog.comments.any? %>
     <%= render @blog.comments %>
   <% else %>
