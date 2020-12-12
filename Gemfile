@@ -46,6 +46,7 @@ gem "gritter", "1.2.0"
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'mini_magick', '~> 4.6'
 gem 'petergate', '~> 1.7'
+gem 'redis', '~> 3.3', '>= 3.3.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
