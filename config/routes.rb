@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :comments
   devise_for :users,
              path: '',
              path_names:
@@ -20,4 +19,6 @@ Rails.application.routes.draw do
       put :toggle_status
     end
   end
+
+  mount ActionCable.server => '/cable'
 end
