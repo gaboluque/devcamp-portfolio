@@ -1,12 +1,28 @@
-
 <h2>
   <%= @blog.title %>
 </h2>
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-<br>
-<br>
-<p>
+
+<p class="mt-3">
   <%= @blog.body %>
 </p>
+
+<% unless current_user.is_a? GuestUser %>
+  <%= form_for @comment, url: '#' do |f| %>
+    <div class="form-group mb-3">
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control' %>
+    </div>
+    <%= f.submit 'Post comment', class: 'btn btn-primary w-25' %>
+  <% end %>
+<% end %>
+
+<div class="blog-post-comments mt-3">
+  <% if @blog.comments.any? %>
+    <%= render @blog.comments %>
+  <% else %>
+    <p class="text-muted m-5 text-center">No comments for this blog post</p>
+  <% end %>
+</div>
 
 
